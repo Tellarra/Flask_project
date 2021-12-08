@@ -11,7 +11,5 @@ cursor.execute(create_tables)
 create_tables = "CREATE TABLE IF NOT EXISTS items (name text, price real)"
 cursor.execute(create_tables)
 
-cursor.execute("INSERT INTO items VALUES ('item1', 10.99)")
-
 connection.commit()
 connection.close()
