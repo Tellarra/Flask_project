@@ -17,11 +17,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.secret_key = "Secret"
 api = Api(app)
 
-
-@app.before_first_request
-def create_tables() :
-    db.create_all()
-
 # This JWT object uses the app (The block above), authenticate and identity
 # To allow the login feature
 # It create a new endpoint (/auth)
